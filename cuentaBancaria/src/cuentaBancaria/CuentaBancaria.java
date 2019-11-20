@@ -17,25 +17,13 @@ public class CuentaBancaria {
 	public String getNombre() {
 		return nombre;
 	}
-	//Este método almacena el nombre del titular del objeto
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
 	//Este método muestra el CCC del objeto
 	public String getCCC() {
 		return ccc;
 	}
-	//Este método almacena el CCC del objeto
-	public void setCCC(String CCC) {
-		this.ccc = CCC;
-	}
 	//Este método muestra el saldo del objeto
 	public double getSaldo() {
 		return this.saldo;
-	}
-	//Este método almacena el saldo del objeto
-	public void setSaldo(double saldo) {
-		this.saldo = saldo;
 	}
 	//Este método permite realizar un ingreso
 	public void ingresarSaldo(double dineroIngresado) {
@@ -114,11 +102,14 @@ public class CuentaBancaria {
 				}
 			}
 			if(Integer.valueOf(ccc.substring(10, 11)) == digito1 && (Integer.valueOf(ccc.substring(11, 12)) == digito2)) {
+				System.out.println("El código es válido");
 				return true;
 			}else {
+				System.out.println("El código no es válido");
 				return false;
 			}
 		}else {
+			System.out.println("El código no es válido");
 			return false;
 		}
 	}

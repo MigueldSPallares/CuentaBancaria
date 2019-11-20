@@ -3,10 +3,8 @@ package cuentaBancaria;
 import java.util.Scanner;
 
 public class Menú {
-	public Menú() {
-		
-	}
-	public int pintaMenu() {
+
+	public static int pintaMenu() {
 		int opc = 0;
 		Scanner leer = new Scanner(System.in);
 		do {
